@@ -1,0 +1,49 @@
+/* --- Añadir al final de style.css o en un login.css separado --- */
+
+/* Estilos específicos para la página de login */
+body.page-login .content-section {
+    max-width: 500px; /* Un poco más estrecho para el formulario de login */
+    padding: 2rem;
+    margin-top: 3rem;
+    text-align: center;
+}
+
+body.page-login h2 {
+    margin-bottom: 1.5rem;
+    font-size: 2em;
+}
+
+body.page-login form label {
+    text-align: left;
+    margin-bottom: 0.5rem;
+}
+
+body.page-login form input[type="text"],
+body.page-login form input[type="password"] {
+    margin-bottom: 1.5rem;
+    padding: 0.75rem;
+    font-size: 1.1rem;
+    border-radius: 0.4rem;
+}
+
+body.page-login form button[type="submit"] {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+
+body.page-login p {
+    margin-top: 1.5rem;
+    font-size: 1.1em;
+}
+
+body.page-login p a {
+    color: var(--color-accent);
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+body.page-login p a:hover {
+    color: var(--color-link-hover);
+}

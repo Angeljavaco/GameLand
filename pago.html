@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameLand - Proceso de Pago</title>
+    <link rel="stylesheet" href="ESTILOS/estilos.css">
+</head>
+<body class="page-pago">
+      <header class="header-container">
+    <img src="IMAGENES/logoproyec.png" alt="Logo de GameLand" class="logo" />
+        <h1>GameLand</h1>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="productos.html">Productos</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="cliente.html">Atención al Cliente</a>
+            <a href="historia.html">Historia</a>
+            <a href="galeria.html">Galería</a>
+            <a href="noticias.html">Noticias</a>
+            <a href="Personaliza.html">Personaliza tus juguetes</a>
+            <a href="faq.html">Preguntas Frecuentes</a>
+            <a href="politica_privacidad.html">Política de Privacidad</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Proceso de Pago</h2>
+        <div class="content-section">
+            <h3>Detalles del Pedido</h3>
+            <ul id="resumen-carrito">
+                </ul>
+            <p>Total a pagar: S/ <span id="total-pago">0.00</span></p>
+
+            <h3>Información de Pago</h3>
+            <form id="form-pago">
+                <label for="metodo-pago">Método de Pago:</label>
+                <select id="metodo-pago" name="metodo-pago" required>
+                    <option value="">Selecciona un método</option>
+                    <option value="tarjeta">Tarjeta de Crédito/Débito</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="yape">Yape (Solo Perú)</option>
+                </select>
+
+                <div id="campos-tarjeta" class="payment-method-fields" style="display: none;">
+                    <h4>Datos de la Tarjeta</h4>
+                    <label for="nombre-titular">Nombre del Titular:</label>
+                    <input type="text" id="nombre-titular" name="nombre-titular" placeholder="Nombre como aparece en la tarjeta">
+
+                    <label for="numero-tarjeta">Número de Tarjeta:</label>
+                    <input type="text" id="numero-tarjeta" name="numero-tarjeta" placeholder="XXXX XXXX XXXX XXXX" pattern="\d{13,19}" title="Ingrese un número de tarjeta válido.">
+
+                    <label for="fecha-vencimiento">Fecha de Vencimiento (MM/AA):</label>
+                    <input type="text" id="fecha-vencimiento" name="fecha-vencimiento" placeholder="MM/AA" pattern="(0[1-9]|1[0-2])\/?([0-9]{2})" title="Ingrese una fecha de vencimiento válida (MM/AA).">
+
+                    <label for="cvv">CVV:</label>
+                    <input type="text" id="cvv" name="cvv" placeholder="XXX" pattern="\d{3,4}" title="Ingrese el CVV (3 o 4 dígitos).">
+                </div>
+
+                <div id="campos-paypal" class="payment-method-fields" style="display: none;">
+                    <h4>Pago con PayPal</h4>
+                    <p>Al hacer clic en "Confirmar Pago", serás redirigido a la página de PayPal para iniciar sesión en tu cuenta y completar la transacción de forma segura.</p>
+                    <img src="IMAGENES/LogoPaypal.jpg" alt="PayPal Logo" style="max-width: 150px; margin-top: 10px;">
+                    <p>Asegúrate de tener una cuenta de PayPal y saldo suficiente o una tarjeta vinculada.</p>
+                </div>
+
+                <div id="campos-yape" class="payment-method-fields" style="display: none;">
+                    <h4>Pago con Yape</h4>
+                    <p>Para completar tu pago con Yape, por favor, sigue estos pasos:</p>
+                    <ol>
+                        <li>Abre tu aplicación Yape en tu celular.</li>
+                        <li>Escanea el siguiente código QR o Yapea al número: <strong>987654321</strong>.</li>
+                        <li>Ingresa el monto exacto a pagar: <strong>S/ <span id="yape-monto">0.00</span></strong>.</li>
+                        <li>Una vez realizado el pago, haz clic en "Confirmar Pago" a continuación.</li>
+                    </ol>
+                    <img src="IMAGENES/QrYape.jpg" alt="Yape QR Code" style="max-width: 200px; margin-top: 10px; border: 1px solid #ccc;">
+                    <p>Tu pedido será procesado una vez que verifiquemos la transacción.</p>
+                </div>
+
+                <h4>Datos de Contacto y Facturación</h4>
+                <label for="correo-electronico">Correo Electrónico:</label>
+                <input type="email" id="correo-electronico" name="correo-electronico" placeholder="tu@ejemplo.com" required>
+
+                <label for="direccion-facturacion">Dirección de Facturación:</label>
+                <textarea id="direccion-facturacion" name="direccion-facturacion" rows="3" placeholder="Calle, número, ciudad, código postal" required></textarea>
+
+                <button type="submit">Confirmar Pago</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 GameLand – Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="Scripts/pago.js"></script>
+</body>
+</html>

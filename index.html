@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Inicio - GameLand</title>
+  <link rel="stylesheet" href="ESTILOS/estilos.css" />
+  <style>
+    /* Solo para mejorar el ejemplo del marquee */
+    .marquee-ofertas {
+      background-color: #f5f5f5;
+      color: #d33;
+      padding: 0.5em 0;
+      font-weight: bold;
+      overflow: hidden;
+      white-space: nowrap;
+      box-sizing: border-box;
+    }
+    .marquee-ofertas span {
+      display: inline-block;
+      padding-left: 100%;
+      animation: marquee 15s linear infinite;
+    }
+    @keyframes marquee {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header-container" role="banner">
+    <img src="IMAGENES/logoproyec.png" alt="Logo de GameLand" class="logo" />
+    <h1>GameLand</h1>
+  </header>
+
+  <nav>
+            <a href="index.html">Inicio</a>
+            <a href="productos.html">Productos</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="cliente.html">Atención al Cliente</a>
+            <a href="historia.html">Historia</a>
+            <a href="galeria.html">Galería</a>
+            <a href="noticias.html">Noticias</a>
+            <a href="Personaliza.html">Personaliza tus juguetes</a>
+            <a href="faq.html">Preguntas Frecuentes</a>
+            <a href="politica_privacidad.html">Política de Privacidad</a>
+        </nav>
+
+  <!-- Reemplazo de <marquee> por animación CSS para mejor accesibilidad -->
+  <div class="marquee-ofertas" role="region" aria-label="Ofertas destacadas">
+    <span>¡Descuentos de hasta el 50% en juguetes, consolas, peluches y más!</span>
+  </div>
+
+  <main>
+    <section>
+      <h2>¿Quiénes somos?</h2>
+      <p>
+        En GameLand, tu lugar favorito en Arequipa para encontrar las mejores consolas, juguetes y peluches.
+        Ofrecemos calidad, diversión y precios que te encantarán, todo en un solo lugar.
+        ¡Haz que cada juego sea una aventura!
+      </p>
+    </section>
+
+    <section class="multimedia" aria-label="Video sobre confección de peluches artesanales">
+      <h2>Confección de los peluches artesanales</h2>
+      <div class="video-container" style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden;">
+        <iframe
+          src="https://www.youtube.com/embed/WcnLyyB3-28"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          title="Video sobre confección de peluches artesanales"
+          style="position:absolute; top:0; left:0; width:100%; height:100%;">
+        </iframe>
+      </div>
+    </section>
+
+    <section class="galeria-imagenes" aria-label="Galería de productos">
+      <img src="imagenes/GALLINA.jpg" alt="Peluche de gallina" />
+      <img src="imagenes/PERRO.jpg" alt="Peluche de perro" />
+      <img src="imagenes/STICH.jpeg" alt="Peluche de Stitch" />
+    </section>
+
+    <!-- Carrusel de imágenes -->
+    <section class="carrusel-container" aria-label="Carrusel de imágenes">
+      <h1> Ofertas </h1>
+      <div class="carrusel" style="position:relative; max-width:600px; margin:auto;">
+        <img src="IMAGENES/OfertaJuguetes.png" alt="Juego Monopoly" class="carrusel-imagen activo" style="width:100%; display:block;" />
+        <img src="IMAGENES/OfertaNintento.png" alt="Consola Nintendo" class="carrusel-imagen" style="width:100%; display:none;" />
+        <img src="IMAGENES/OfertaPeluche.png" alt="Tanque de guerra" class="carrusel-imagen" style="width:100%; display:none;" />
+        <button class="prev" aria-label="Imagen anterior" style="position:absolute; top:50%; left:0; transform:translateY(-50%); background:none; border:none; font-size:2rem; cursor:pointer;">&#10094;</button>
+        <button class="next" aria-label="Imagen siguiente" style="position:absolute; top:50%; right:0; transform:translateY(-50%); background:none; border:none; font-size:2rem; cursor:pointer;">&#10095;</button>
+      </div>
+    </section>
+
+  </main>
+
+  <footer role="contentinfo" style="text-align:center; padding:1rem 0; background:#222; color:#eee;">
+    <p>&copy; 2025 GameLand – Todos los derechos reservados.</p>
+    <div class="social-links" style="display:flex; justify-content:center; gap:1rem;">
+      <a href="#" aria-label="Facebook"><img src="imagenes/facebook.png" alt="Facebook" style="width:24px; height:24px;" /></a>
+      <a href="#" aria-label="instagram"><img src="imagenes/instagram.jpeg" alt="Instagram" style="width:24px; height:24px;" /></a>
+      <a href="#" aria-label="WhatsApp"><img src="imagenes/wazap.jpg" alt="WhatsApp" style="width:24px; height:24px;" /></a>
+    </div>
+  </footer>
+    <script src="Scripts/Index.js"></script>
+
+
+
+</body>
+</html>

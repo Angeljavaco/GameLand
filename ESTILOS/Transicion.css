@@ -1,0 +1,32 @@
+/* --- Transiciones para la Galería de Juguetes --- */
+.grid-galeria figure {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición para el escalado y la sombra */
+}
+
+.grid-galeria figure:hover {
+    transform: scale(1.05); /* Ligeramente más grande al pasar el ratón */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    z-index: 1; /* Asegura que la imagen agrandada esté por encima de otras */
+}
+
+/* --- Transiciones para los enlaces de Navegación --- */
+nav a {
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.2s ease; /* Transición para color, fondo y escalado */
+    padding: 8px 15px; /* Para que el fondo sea visible */
+    border-radius: 5px; /* Bordes redondeados para el fondo */
+}
+
+nav a:hover {
+    color: #007bff; /* Cambia el color del texto al pasar el ratón */
+    background-color: #f0f0f0; /* Un ligero cambio de fondo */
+    transform: translateY(-2px); /* Un pequeño levantamiento */
+}
+
+/* --- Transiciones para los iconos sociales del pie de página --- */
+.social-links img {
+    transition: transform 0.3s ease; /* Transición para el escalado de los iconos */
+}
+
+.social-links img:hover {
+    transform: scale(1.1); /* Ligeramente más grande al pasar el ratón */
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Noticias de GameLand Arequipa</title>
+    <link rel="stylesheet" href="ESTILOS/estilos.css" />
+    <meta name="description" content="Últimas noticias, ofertas y eventos exclusivos de GameLand Arequipa, tu tienda líder en consolas, juguetes y peluches." />
+    <meta name="author" content="GameLand Arequipa" />
+</head>
+<body class="pagina-noticias">
+
+    <!-- Encabezado principal -->
+      <header class="header-container">
+    <img src="IMAGENES/logoproyec.png" alt="Logo de GameLand" class="logo" />
+        <h1>GameLand</h1>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="productos.html">Productos</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="cliente.html">Atención al Cliente</a>
+            <a href="historia.html">Historia</a>
+            <a href="galeria.html">Galería</a>
+            <a href="noticias.html">Noticias</a>
+            <a href="Personaliza.html">Personaliza tus juguetes</a>
+            <a href="faq.html">Preguntas Frecuentes</a>
+            <a href="politica_privacidad.html">Política de Privacidad</a>
+        </nav>
+    </header>
+
+    <main class="noticias-entretenimiento">
+        <!-- Marquee para noticias destacadas -->
+        <section aria-label="Noticias destacadas" class="marquee-container" style="background: #f5f5f5; padding: 1rem; margin-bottom: 2rem; border-radius: 8px;">
+            <h2 class="titulo-seccion" style="margin-bottom: 0.5rem;">Noticias Destacadas</h2>
+            <div id="marquee" role="region" aria-live="polite" aria-atomic="true" style="white-space: nowrap; overflow: hidden; font-weight: bold; font-size: 1.1rem;">
+                <span style="display: inline-block; padding-right: 5rem;">
+                    ¡Nueva consola Nintendo Switch Lite disponible con 10% de descuento!
+                </span>
+                <span style="display: inline-block; padding-right: 5rem;">
+                    Gran oferta: 15% de descuento en todos nuestros peluches.
+                </span>
+                <span style="display: inline-block; padding-right: 5rem;">
+                    Evento exclusivo de lanzamiento de PlayStation 5 en GameLand Arequipa.
+                </span>
+            </div>
+        </section>
+
+        <!-- Sección principal de noticias -->
+        <section aria-labelledby="seccion-noticias">
+            <h2 id="seccion-noticias" class="titulo-seccion">Últimas Noticias</h2>
+            <p class="introduccion">
+                Mantente informado sobre las novedades, promociones y eventos especiales en GameLand Arequipa.
+            </p>
+
+            <div class="noticias-container">
+                <article class="articulo-noticia" tabindex="0" aria-labelledby="noticia1-titulo" aria-describedby="noticia1-desc">
+                    <img src="IMAGENES/OfertaNintento.png" alt="Nueva consola Nintendo Switch Lite en stock" class="imagen-noticia" loading="lazy" />
+                    <h3 id="noticia1-titulo" class="subtitulo-noticia">Nueva consola Nintendo Switch Lite disponible</h3>
+                    <p id="noticia1-desc">
+                        La consola Nintendo Switch Lite ya se encuentra disponible en GameLand Arequipa. Aprovecha un descuento especial del 10% por tiempo limitado.
+                    </p>
+                    <a href="#" class="link-noticia" aria-label="Leer más sobre la consola Nintendo Switch Lite">Leer más</a>
+                </article>
+
+                <article class="articulo-noticia" tabindex="0" aria-labelledby="noticia2-titulo" aria-describedby="noticia2-desc">
+                    <img src="IMAGENES/OfertaJuguetes.png" alt="Peluches en oferta con descuento" class="imagen-noticia" loading="lazy" />
+                    <h3 id="noticia2-titulo" class="subtitulo-noticia">Oferta especial en peluches para niños</h3>
+                    <p id="noticia2-desc">
+                        Disfruta de un 15% de descuento en toda nuestra colección de peluches. Trae a tus hijos y elige el peluche ideal para ellos.
+                    </p>
+                    <a href="#" class="link-noticia" aria-label="Leer más sobre la oferta en peluches">Leer más</a>
+                </article>
+
+                <article class="articulo-noticia" tabindex="0" aria-labelledby="noticia3-titulo" aria-describedby="noticia3-desc">
+                    <img src="IMAGENES/PS4.jpeg" alt="Evento de lanzamiento de PlayStation 5" class="imagen-noticia" loading="lazy" />
+                    <h3 id="noticia3-titulo" class="subtitulo-noticia">Evento exclusivo de lanzamiento de PlayStation 5</h3>
+                    <p id="noticia3-desc">
+                        Participa en el evento oficial de lanzamiento de PlayStation 5 en GameLand Arequipa. Contaremos con concursos, sorpresas y mucho más.
+                    </p>
+                    <a href="#" class="link-noticia" aria-label="Leer más sobre el evento de lanzamiento de PlayStation 5">Leer más</a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="footer" role="contentinfo">
+        <div class="social-links" aria-label="Redes sociales">
+            <a href="#" aria-label="Facebook"><img src="IMAGENES/facebook.png" alt="Facebook" /></a>
+            <a href="#" aria-label="Instagram"><img src="IMAGENES/instagram.jpeg" alt="Instagram" /></a>
+            <a href="#" aria-label="WhatsApp"><img src="IMAGENES/wazap.jpg" alt="WhatsApp" /></a>
+        </div>
+        <p>&copy; 2025 GameLand Arequipa - Calidad, diversión y precios que te encantarán.</p>
+    </footer>
+
+    <!-- Script para hacer funcionar la marquesina de manera continua -->
+    <script>
+        (function() {
+            const marquee = document.getElementById('marquee');
+            let scrollAmount = 0;
+            const speed = 1; // Velocidad de desplazamiento (px por frame)
+
+            function scrollMarquee() {
+                scrollAmount += speed;
+                if(scrollAmount >= marquee.scrollWidth / 3) { // Repite el contenido
+                    scrollAmount = 0;
+                }
+                marquee.style.transform = `translateX(-${scrollAmount}px)`;
+                requestAnimationFrame(scrollMarquee);
+            }
+
+            // Clonar el contenido para efecto continuo
+            marquee.innerHTML += marquee.innerHTML;
+            scrollMarquee();
+        })();
+    </script>
+
+</body>
+</html>

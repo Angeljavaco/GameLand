@@ -1,0 +1,1357 @@
+/* ====== CSS GENERAL PARA TODO EL SITIO ====== */
+
+/* Variables CSS para colores */
+:root {
+  --color-bg: #fff9e6;
+  --color-text: #333;
+  --color-header-bg: #ffcc00;
+  --color-nav-bg: #ff9900;
+  --color-nav-link-bg: #f4a261;
+  --color-nav-link-hover-bg: #e76f51;
+  --color-accent: #cc6600;
+  --color-accent-light: #fff3b0;
+  --color-button-bg: #ff9900;
+  --color-button-hover-bg: #cc7a00;
+  --color-footer-bg: #ffcc00;
+  --color-link-hover: #ff9900;
+}
+
+/* Body y fuentes */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Contenedor Header */
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0.625rem;
+  background-color: var(--color-header-bg);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenedor video responsive */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 ratio */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  background: #000;
+  margin: 0 auto 1.25rem;
+}
+
+.video-container iframe,
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Logo */
+.logo {
+  max-height: 120px;
+  max-width: 90vw;
+  width: auto;
+  margin-bottom: 0.625rem;
+  user-select: none;
+}
+
+/* Títulos principales */
+h1, header h1 {
+  font-family: 'Georgia', serif;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  margin: 0;
+  color: var(--color-text);
+  text-align: center;
+  max-width: 90vw;
+  line-height: 1.2;
+  
+}
+
+/* Navegación */
+nav {
+  background-color: var(--color-nav-bg);
+  text-align: center;
+  padding: 0.625rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  user-select: none;
+}
+
+nav a {
+  background-color: var(--color-nav-link-bg);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  margin: 0.3125rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 700;
+  white-space: nowrap;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav a:hover,
+nav a:focus-visible {
+  background-color: var(--color-nav-link-hover-bg);
+  transform: scale(1.1);
+  outline-offset: 3px;
+  outline: 2px solid var(--color-nav-link-hover-bg);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Contenido principal */
+main {
+  padding: 1.25rem 0.625rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Sección Atención al Cliente */
+.atencion-cliente {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: var(--color-accent-light);
+  padding: 1.25rem;
+  border-radius: 0.625rem;
+  box-shadow: 0 0 15px rgba(0,0,0,0.05);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  box-sizing: border-box;
+}
+
+.atencion-cliente h2, 
+.atencion-cliente h3 {
+  color: var(--color-accent);
+}
+
+.atencion-cliente ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.atencion-cliente ul li {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #555;
+}
+
+/* Formularios */
+form label {
+  font-weight: 700;
+  color: #444;
+  display: block;
+  margin-top: 1rem;
+}
+
+form input[type="text"],
+form input[type="email"],
+form select,
+form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.25rem;
+  border: 1px solid #ccc;
+  border-radius: 0.3125rem;
+  box-sizing: border-box;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form select:focus,
+form textarea:focus {
+  border-color: var(--color-nav-bg);
+  box-shadow: 0 0 5px var(--color-nav-bg);
+  outline: none;
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 6.25rem;
+}
+
+form input[type="radio"],
+form input[type="checkbox"] {
+  margin-right: 0.3125rem;
+  vertical-align: middle;
+}
+
+/* Botones */
+button[type="submit"],
+.cta-button {
+  background-color: var(--color-button-bg);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.3125rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  display: inline-block;
+  text-align: center;
+  font-weight: 700;
+  white-space: nowrap;
+  user-select: none;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+button[type="submit"]:hover,
+.cta-button:hover,
+button[type="submit"]:focus-visible,
+.cta-button:focus-visible {
+  background-color: var(--color-button-hover-bg);
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  outline-offset: 3px;
+  outline: 2px solid var(--color-button-hover-bg);
+}
+
+/* Footer */
+footer {
+  background-color: var(--color-footer-bg);
+  text-align: center;
+  padding: 0.625rem;
+  margin-top: 2.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+footer .social-links a {
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 0.5rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+footer .social-links a:hover,
+footer .social-links a:focus-visible {
+  background-color: #e6e6e6;
+  transform: scale(1.1);
+  outline-offset: 3px;
+  outline: 2px solid #999;
+}
+
+footer .social-links img {
+  width: 30px;
+  height: 30px;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Tablas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.25rem 0;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: 700;
+}
+
+/* Imágenes productos y galería */
+.producto-img {
+  max-width: 100px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 0.5rem;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.producto-img:hover,
+.producto-img:focus-visible {
+  transform: scale(1.1);
+  outline: none;
+}
+
+.galeria-imagenes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.galeria-imagenes img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  border: 2px solid var(--color-header-bg);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  max-width: 90vw;
+  height: auto;
+}
+
+.galeria-imagenes img:hover,
+.galeria-imagenes img:focus-visible {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(255, 204, 0, 0.7);
+  outline: none;
+}
+
+/* Botón CTA (diferente del botón submit para enlaces, etc.) */
+.cta-button {
+  background-color: var(--color-header-bg);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.375rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  user-select: none;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+
+.cta-button:hover,
+.cta-button:focus-visible {
+  background-color: #e6b800;
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  outline-offset: 3px;
+  outline: 2px solid #e6b800;
+}
+
+/* Marquee */
+marquee {
+  background-color: var(--color-header-bg);
+  padding: 0.625rem;
+  margin: 1.25rem 0;
+  font-weight: 700;
+  color: var(--color-text);
+  user-select: none;
+}
+
+/* Enlaces generales */
+a {
+  text-decoration: none;
+  color: var(--color-text);
+  transition: color 0.3s ease;
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--color-link-hover);
+  outline-offset: 3px;
+  outline: 2px solid var(--color-link-hover);
+}
+
+/* Animación pulse para CTA */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 5px rgba(255, 153, 0, 0.7);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 153, 0, 1);
+  }
+}
+
+.cta-button.pulse {
+  animation: pulse 2.5s infinite;
+}
+
+/* ====== MEDIA QUERIES PARA DISEÑO RESPONSIVO ====== */
+
+@media (max-width: 1024px) {
+  .atencion-cliente {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    padding: 0.625rem 0.3125rem;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 0.625rem;
+  }
+
+  .atencion-cliente {
+    grid-template-columns: 1fr;
+    padding: 1rem 0.625rem;
+    width: 95%;
+    margin: 0.625rem auto;
+  }
+
+  .galeria-imagenes {
+    flex-direction: column;
+    gap: 0.625rem;
+  }
+
+  .galeria-imagenes img {
+    width: 100%;
+    height: auto;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  nav a {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .cta-button {
+    width: 100%;
+    padding: 1rem;
+  }
+}
+/* Estilos para el carrusel */
+.carrusel-container {
+  max-width: 600px;
+  margin: 20px auto;
+  position: relative;
+  text-align: center;
+}
+
+.carrusel {
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #333;
+  border-radius: 8px;
+}
+
+.carrusel-imagen {
+  display: none;
+  width: 100%;
+  height: auto;
+}
+
+.carrusel-imagen.activo {
+  display: block;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  font-size: 18px;
+  user-select: none;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/*GALERIA DE IMAGENES*/
+/* Solo afecta a la galería de imágenes */
+
+.grid-galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+}
+
+.grid-galeria figure {
+    flex: 1 1 200px; /* crece, encoge, base 200px */
+    max-width: 220px;
+    margin: 0;
+    text-align: center;
+}
+
+.grid-galeria img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
+
+.grid-galeria figcaption {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+/* PAGINA NOTICIAS*/
+/* ====== CSS para la página de noticias con colores uniformes ====== */
+/* ====== Estilos para sección Noticia ====== */
+
+.noticia-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  background-color: var(--color-accent-light);
+  padding: 1.5rem 2rem;
+  border-radius: 0.625rem;
+  box-shadow: 0 0 15px rgba(0,0,0,0.05);
+  font-family: Arial, sans-serif;
+  color: var(--color-text);
+  box-sizing: border-box;
+}
+
+.noticia-titulo {
+  font-family: 'Georgia', serif;
+  font-size: 2rem;
+  color: var(--color-accent);
+  margin-bottom: 0.75rem;
+  text-align: center;
+  letter-spacing: 1.5px;
+}
+
+.noticia-fecha {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-style: italic;
+}
+
+.noticia-imagen {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  margin: 0 auto 1.25rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.noticia-imagen:hover,
+.noticia-imagen:focus-visible {
+  transform: scale(1.05);
+  outline: none;
+  box-shadow: 0 4px 12px rgba(204, 102, 0, 0.7);
+}
+
+.noticia-contenido {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  margin-bottom: 1.5rem;
+}
+
+.noticia-enlace {
+  display: inline-block;
+  background-color: var(--color-button-bg);
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.4rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  user-select: none;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+.noticia-enlace:hover,
+.noticia-enlace:focus-visible {
+  background-color: var(--color-button-hover-bg);
+  transform: scale(1.05);
+  outline-offset: 3px;
+  outline: 2px solid var(--color-button-hover-bg);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive para noticia */
+@media (max-width: 768px) {
+  .noticia-container {
+    padding: 1rem 1rem;
+    width: 95%;
+  }
+
+  .noticia-titulo {
+    font-size: 1.7rem;
+  }
+
+  .noticia-contenido {
+    font-size: 1rem;
+  }
+}
+
+/* Header */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    flex-wrap: wrap; /* Añadido para que en pantallas pequeñas se ajusten */
+}
+
+.header-container h1 {
+    margin: 0;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: #333;
+    flex-wrap: wrap; /* Añadido para que los enlaces se ajusten en pantallas pequeñas */
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+}
+
+/* Marquee container */
+.marquee-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap; /* Añadido para que el contenido se ajuste */
+}
+
+/* Noticias Container */
+.noticias-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+.articulo-noticia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    min-width: 250px; /* Para que no se hagan demasiado pequeños */
+    margin-bottom: 2rem;
+}
+
+.articulo-noticia img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.articulo-noticia h3 {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+    flex-wrap: wrap; /* Añadido para que en pantallas pequeñas se ajusten */
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.social-links a img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Ajuste responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+    .noticias-container {
+        justify-content: center;
+    }
+
+    .articulo-noticia {
+        width: 90%; /* Las noticias ocupan más espacio en pantallas pequeñas */
+        text-align: center;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+        margin-top: 1rem;
+    }
+}
+/* ========================================= */
+/* ====== 1. ESTILOS GENERALES / GLOBALES ====== */
+/* ========================================= */
+
+/* Variables CSS para colores */
+:root {
+    --color-bg: #fff9e6;
+    --color-text: #333;
+    --color-header-bg: #ffcc00;
+    --color-nav-bg: #ff9900;
+    --color-nav-link-bg: #f4a261;
+    --color-nav-link-hover-bg: #e76f51;
+    --color-accent: #cc6600;
+    --color-accent-light: #fff3b0;
+    --color-button-bg: #ff9900;
+    --color-button-hover-bg: #cc7a00;
+    --color-footer-bg: #ffcc00;
+    --color-link-hover: #ff9900;
+}
+
+/* Body y fuentes */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Contenedor Header */
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0.625rem;
+    background-color: var(--color-header-bg);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenedor video responsive (si se usa en alguna página) */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    margin: 0 auto 1.25rem;
+}
+
+.video-container iframe,
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Logo */
+.logo {
+    max-height: 120px;
+    max-width: 90vw;
+    width: auto;
+    margin-bottom: 0.625rem;
+    user-select: none;
+}
+
+/* Títulos principales */
+h1, header h1 {
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    margin: 0;
+    color: var(--color-text);
+    text-align: center;
+    max-width: 90vw;
+    line-height: 1.2;
+}
+
+/* Navegación */
+nav {
+    background-color: var(--color-nav-bg);
+    text-align: center;
+    padding: 0.625rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    user-select: none;
+}
+
+nav a {
+    background-color: var(--color-nav-link-bg);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    margin: 0.3125rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 700;
+    white-space: nowrap;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav a:hover,
+nav a:focus-visible {
+    background-color: var(--color-nav-link-hover-bg);
+    transform: scale(1.1);
+    outline-offset: 3px;
+    outline: 2px solid var(--color-nav-link-hover-bg);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Contenido principal */
+main {
+    padding: 1.25rem 0.625rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* Sección de Contenido con Fondo Acentuado (reutilizable) */
+/* Usado en Atención al Cliente, Pago, Confirmación, FAQ, Política de Privacidad, Personaliza */
+.content-section {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--color-accent-light);
+    padding: 1.25rem;
+    border-radius: 0.625rem;
+    box-shadow: 0 0 15px rgba(0,0,0,0.05);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    box-sizing: border-box;
+}
+
+.content-section h2,
+.content-section h3 {
+    color: var(--color-accent);
+}
+
+.content-section ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.content-section ul li {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #555;
+}
+
+/* Formularios generales */
+form label {
+    font-weight: 700;
+    color: #444;
+    display: block;
+    margin-top: 1rem;
+}
+
+form input[type="text"],
+form input[type="email"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.25rem;
+    border: 1px solid #ccc;
+    border-radius: 0.3125rem;
+    box-sizing: border-box;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form select:focus,
+form textarea:focus {
+    border-color: var(--color-nav-bg);
+    box-shadow: 0 0 5px var(--color-nav-bg);
+    outline: none;
+}
+
+form textarea {
+    resize: vertical;
+    min-height: 6.25rem;
+}
+
+form input[type="radio"],
+form input[type="checkbox"] {
+    margin-right: 0.3125rem;
+    vertical-align: middle;
+}
+
+/* Botones */
+button[type="submit"],
+.button-primary, /* Clase genérica para botones de acción */
+.cta-button {
+    background-color: var(--color-button-bg);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.3125rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    display: inline-block;
+    text-align: center;
+    font-weight: 700;
+    white-space: nowrap;
+    user-select: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+button[type="submit"]:hover,
+.button-primary:hover,
+.cta-button:hover,
+button[type="submit"]:focus-visible,
+.button-primary:focus-visible,
+.cta-button:focus-visible {
+    background-color: var(--color-button-hover-bg);
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    outline-offset: 3px;
+    outline: 2px solid var(--color-button-hover-bg);
+}
+
+/* Footer */
+footer {
+    background-color: var(--color-footer-bg);
+    text-align: center;
+    padding: 0.625rem;
+    margin-top: 2.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+footer .social-links a {
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 0.5rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+footer .social-links a:hover,
+footer .social-links a:focus-visible {
+    background-color: #e6e6e6;
+    transform: scale(1.1);
+    outline-offset: 3px;
+    outline: 2px solid #999;
+}
+
+footer .social-links img {
+    width: 30px;
+    height: 30px;
+    pointer-events: none;
+    user-select: none;
+}
+
+/* Marquee */
+marquee {
+    background-color: var(--color-header-bg);
+    padding: 0.625rem;
+    margin: 1.25rem 0;
+    font-weight: 700;
+    color: var(--color-text);
+    user-select: none;
+}
+
+/* Enlaces generales */
+a {
+    text-decoration: none;
+    color: var(--color-text);
+    transition: color 0.3s ease;
+}
+
+a:hover,
+a:focus-visible {
+    color: var(--color-link-hover);
+    outline-offset: 3px;
+    outline: 2px solid var(--color-link-hover);
+}
+
+/* Animación pulse para CTA */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 5px rgba(255, 153, 0, 0.7);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 15px rgba(255, 153, 0, 1);
+    }
+}
+
+.cta-button.pulse {
+    animation: pulse 2.5s infinite;
+}
+
+/* ============================================ */
+/* ====== 2. MEDIA QUERIES PARA RESPONSIVE GENERAL ====== */
+/* ============================================ */
+
+@media (max-width: 1024px) {
+    .content-section { /* Aplica al .content-section */
+        grid-template-columns: repeat(2, 1fr); /* Si tienes dos columnas en desktop */
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        padding: 0.625rem 0.3125rem;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 0.625rem;
+    }
+
+    .content-section { /* Aplica al .content-section */
+        grid-template-columns: 1fr;
+        padding: 1rem 0.625rem;
+        width: 95%;
+        margin: 0.625rem auto;
+    }
+
+    .galeria-imagenes { /* Ya estaba, pero lo reconfirmo para el responsive */
+        flex-direction: column;
+        gap: 0.625rem;
+    }
+
+    .galeria-imagenes img { /* Ya estaba, pero lo reconfirmo para el responsive */
+        width: 100%;
+        height: auto;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .cta-button { /* Ya estaba, pero lo reconfirmo para el responsive */
+        width: 100%;
+        padding: 1rem;
+    }
+
+    /* Ajuste responsive para las secciones de noticias y footer que tenías */
+    .noticias-container {
+        justify-content: center;
+    }
+
+    .articulo-noticia {
+        width: 90%; /* Las noticias ocupan más espacio en pantallas pequeñas */
+        text-align: center;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    nav a {
+        font-size: 0.9rem;
+        padding: 0.5rem 0.75rem;
+    }
+}
+
+/* ============================================== */
+/* ====== 3. ESTILOS ESPECÍFICOS POR PÁGINA / COMPONENTE ====== */
+/* ============================================== */
+
+/* ====== ESTILOS ESPECÍFICOS: PÁGINA DE INICIO (index.html) ====== */
+/* Usa un body class para estilos que solo apliquen a la home */
+body.home-page .carrusel-container {
+    max-width: 600px;
+    margin: 20px auto;
+    position: relative;
+    text-align: center;
+}
+
+body.home-page .carrusel {
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #333;
+    border-radius: 8px;
+}
+
+body.home-page .carrusel-imagen {
+    display: none;
+    width: 100%;
+    height: auto;
+}
+
+body.home-page .carrusel-imagen.activo {
+    display: block;
+}
+
+body.home-page .prev,
+body.home-page .next {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    font-size: 18px;
+    user-select: none;
+}
+
+body.home-page .prev:hover,
+body.home-page .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+body.home-page .prev {
+    left: 10px;
+}
+
+body.home-page .next {
+    right: 10px;
+}
+
+
+/* ====== ESTILOS ESPECÍFICOS: PÁGINA DE PRODUCTOS (productos.html) ====== */
+/* Aquí se quedan los estilos de la tabla y el carrito de productos */
+table { /* Estos selectores son genéricos, pero solo se aplica a la tabla de productos */
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.25rem 0;
+}
+
+th, td { /* Ya están definidos arriba */
+    border: 1px solid #ddd;
+    padding: 0.75rem;
+    text-align: left;
+}
+
+th { /* Ya están definidos arriba */
+    background-color: #f2f2f2;
+    font-weight: 700;
+}
+
+.producto-img { /* Ya están definidos arriba */
+    max-width: 100px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.producto-img:hover,
+.producto-img:focus-visible { /* Ya están definidos arriba */
+    transform: scale(1.1);
+    outline: none;
+}
+
+/* Estilos del carrito específico en la página de productos */
+#carrito-lista { /* Usando un ID único para el <ul> del carrito en productos.html */
+    margin-top: 1rem;
+    padding-left: 1.25rem;
+    list-style-type: decimal; /* O disc, según prefieras */
+    border: 1px solid var(--color-nav-link-bg);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: #fff;
+}
+
+#carrito-lista li {
+    margin-bottom: 0.5rem;
+}
+
+#total-carrito { /* Usando un ID único para el span del total en productos.html */
+    font-weight: 700;
+    color: var(--color-accent);
+}
+
+
+/* ====== ESTILOS ESPECÍFICOS: PÁGINA DE GALERÍA (galeria.html) ====== */
+/* Los estilos .galeria-imagenes y .grid-galeria ya los tenías y son específicos para la galería */
+/* Los he movido a esta sección y agregado a media queries generales si aplican */
+
+
+/* ====== ESTILOS ESPECÍFICOS: PÁGINA DE NOTICIAS (noticias.html) ====== */
+/* Las clases .noticia-container, .noticia-titulo, etc., ya las tenías y son específicas para noticias */
+/* Las he movido a esta sección y agregado a media queries generales si aplican */
+
+
+/* ====== ESTILOS ESPECÍFICOS: PÁGINA DE PERSONALIZA TU JUGUETE (personaliza.html) ====== */
+/* Aquí puedes añadir clases o IDs si necesitas estilos especiales que no cubre .content-section */
+
+
+/* ====== ESTILOS ESPECÍFICOS: PÁGINA DE ATENCIÓN AL CLIENTE (atencion_cliente.html) ====== */
+/* Esta página usa principalmente .content-section. Puedes añadir más si es necesario. */
+
+
+/* ====== ESTILOS ESPECÍFICOS: PÁGINA DE CONTACTO (contacto.html) ====== */
+/* Esta página usa principalmente .content-section. Puedes añadir más si es necesario. */
+
+
+/* ====== ESTILOS ESPECÍFICOS: PÁGINA DE HISTORIA (historia.html) ====== */
+/* Esta página puede usar .content-section. Añade si hay algo específico. */
+
+
+/* ====== ESTILOS ESPECÍFICOS: PÁGINA DE PAGO (pago.html) ====== */
+/* La página de pago usará .content-section */
+.page-pago #campos-tarjeta { /* Estilo específico para el div de campos de tarjeta solo en la página de pago */
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid #ccc;
+}
+.page-pago ul#resumen-carrito { /* Estilo para la lista de resumen del carrito en la página de pago */
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 1rem;
+}
+.page-pago #total-pago {
+    font-weight: bold;
+    color: var(--color-accent);
+    font-size: 1.2em;
+}
+
+
+/* ====== ESTILOS ESPECÍFICOS: PÁGINA DE CONFIRMACIÓN DE PAGO (confirmacion_pago.html) ====== */
+/* La página de confirmación de pago usará .content-section */
+.page-confirmacion-pago .mensaje-confirmacion {
+    text-align: center;
+    font-size: 1.1em;
+    margin-bottom: 1.5rem;
+}
+.page-confirmacion-pago .mensaje-confirmacion p {
+    margin-bottom: 0.8rem;
+}
+
+
+/* ====== ESTILOS ESPECÍFICOS: PÁGINA DE PREGUNTAS FRECUENTES (faq.html) ====== */
+/* Esta página usará .content-section */
+.page-faq h4 {
+    color: var(--color-accent);
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+.page-faq p {
+    margin-bottom: 1rem;
+}
+
+
+/* ====== ESTILOS ESPECÍFICOS: PÁGINA DE POLÍTICA DE PRIVACIDAD (politica_privacidad.html) ====== */
+/* Esta página usará .content-section */
+.page-politica-privacidad ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+.page-politica-privacidad em {
+    display: block;
+    text-align: right;
+    margin-top: 1rem;
+    font-size: 0.9em;
+    color: #666;
+}
+/* En estilos.css, para los nuevos controles del carrito */
+#carrito-lista li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.item-controles {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.item-controles .item-cantidad {
+    width: 50px;
+    text-align: center;
+    padding: 5px;
+}
+
+.item-controles .btn-eliminar-item {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.item-controles .btn-eliminar-item:hover {
+    background-color: #cc0000;
+}

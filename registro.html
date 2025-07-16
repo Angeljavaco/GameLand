@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regístrate en GameLand</title>
+    <link rel="stylesheet" href="ESTILOS/estilos.css">
+</head>
+<body class="page-registro">
+    <header class="header-container">
+        <img src="IMAGENES/logoproyec.png" alt="GameLand Logo" class="logo">
+        <h1>GameLand</h1>
+    </header>
+<nav>
+            <a href="index.html">Inicio</a>
+            <a href="productos.html">Productos</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="cliente.html">Atención al Cliente</a>
+            <a href="historia.html">Historia</a>
+            <a href="galeria.html">Galería</a>
+            <a href="noticias.html">Noticias</a>
+            <a href="Personaliza.html">Personaliza tus juguetes</a>
+            <a href="faq.html">Preguntas Frecuentes</a>
+            <a href="politica_privacidad.html">Política de Privacidad</a>
+        </nav>
+    <main>
+        <section class="content-section">
+            <h2>Crear una Cuenta Nueva</h2>
+            <form id="register-form">
+                <label for="reg-username">Nombre de Usuario:</label>
+                <input type="text" id="reg-username" name="username" required minlength="3">
+                <small id="username-error" class="error-message"></small>
+
+                <label for="reg-email">Correo Electrónico:</label>
+                <input type="email" id="reg-email" name="email" required>
+
+                <label for="reg-password">Contraseña:</label>
+                <input type="password" id="reg-password" name="password" required minlength="6">
+                <small id="password-error" class="error-message"></small>
+
+                <label for="reg-confirm-password">Confirmar Contraseña:</label>
+                <input type="password" id="reg-confirm-password" name="confirm_password" required>
+                <small id="confirm-password-error" class="error-message"></small>
+
+                <button type="submit" class="button-primary">Registrarse</button>
+            </form>
+            <p>¿Ya tienes una cuenta? <a href="login.html">Inicia Sesión aquí</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 GameLand – Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/registro.js"></script> </body>
+</html>

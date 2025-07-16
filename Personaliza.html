@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personaliza tu Producto - GameLand</title>
+    <link rel="stylesheet" href="ESTILOS/estilos.css" />
+    </head>
+<body>
+ <header class="header-container">
+    <img src="IMAGENES/logoproyec.png" alt="Logo de GameLand" class="logo" />
+        <h1>GameLand</h1>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="productos.html">Productos</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="cliente.html">Atención al Cliente</a>
+            <a href="historia.html">Historia</a>
+            <a href="galeria.html">Galería</a>
+            <a href="noticias.html">Noticias</a>
+            <a href="Personaliza.html">Personaliza tus juguetes</a>
+            <a href="faq.html">Preguntas Frecuentes</a>
+            <a href="politica_privacidad.html">Política de Privacidad</a>
+        </nav>
+    </header>    
+
+    <main>
+        <h2>Personaliza tu Producto</h2>
+        <p>¡Haz que tu producto sea único! Llena el siguiente formulario para elegir tus opciones de personalización:</p>
+
+        <form action="#" method="post">
+            <label for="nombre_cliente">Nombre del cliente:</label><br>
+            <input type="text" id="nombre_cliente" name="nombre_cliente" required placeholder="Tu nombre completo"><br><br>
+
+            <label for="tipo_producto">Selecciona el tipo de producto a personalizar:</label><br>
+            <select id="tipo_producto" name="tipo_producto" required>
+                <option value="">-- Selecciona una opción --</option>
+                <option value="juguete">Juguete</option>
+                <option value="consola">Consola</option>
+            </select><br><br>
+
+            <div id="opciones_juguete" style="display: none;">
+                <h3>Personalización de Juguete</h3>
+                <label for="tipo_juguete">Tipo de juguete:</label><br>
+                <select id="tipo_juguete" name="tipo_juguete">
+                    <option value="oso">Oso</option>
+                    <option value="conejo">Conejo</option>
+                    <option value="perrito">Perro</option>
+                    <option value="gato">Gato</option>
+                    <option value="muñeca">Muñeca</option>
+                    <option value="robot">Robot</option>
+                    <option value="peluche">Peluche</option>
+                </select><br><br>
+
+                <label for="color_juguete">Color:</label><br>
+                <select id="color_juguete" name="color_juguete">
+                    <option value="marron">Marrón</option>
+                    <option value="blanco">Blanco</option>
+                    <option value="rosado">Rosado</option>
+                    <option value="azul">Azul</option>
+                    <option value="negro">Negro</option>
+                    <option value="rojo">Rojo</option>
+                    <option value="verde">Verde</option>
+                    <option value="otro">Otro (especificar en mensaje)</option>
+                </select><br><br>
+
+                <label for="nombre_bordado">Nombre bordado (opcional):</label><br>
+                <input type="text" id="nombre_bordado" name="nombre_bordado" placeholder="Ej. El nombre del niño/a"><br><br>
+
+                <label>Accesorios adicionales:</label><br>
+                <input type="checkbox" name="accesorios_juguete" value="moño"> Moño<br>
+                <input type="checkbox" name="accesorios_juguete" value="gorrito"> Gorro<br>
+                <input type="checkbox" name="accesorios_juguete" value="camiseta"> Camiseta personalizada<br><br>
+            </div>
+
+            <div id="opciones_consola" style="display: none;">
+                <h3>Personalización de Consola</h3>
+                <label for="tipo_consola">Selecciona consola:</label><br>
+                <select id="tipo_consola" name="tipo_consola">
+                    <option value="ps4">PlayStation 4</option>
+                    <option value="xbox_series_x">Xbox Series X</option>
+                    <option value="xbox_series_s">Xbox Series S</option>
+                    <option value="nintendo_switch">Nintendo Switch</option>
+                </select><br><br>
+
+                <label for="color_consola">Color de la consola:</label><br>
+                <select id="color_consola" name="color_consola">
+                    <option value="negro">Negro</option>
+                    <option value="blanco">Blanco</option>
+                    <option value="edicion_especial">Edición Especial</option>
+                    <option value="personalizado">Color personalizado (especificar en mensaje)</option>
+                </select><br><br>
+
+                <label for="texto_personalizado_consola">Texto personalizado para consola (opcional):</label><br>
+                <input type="text" id="texto_personalizado_consola" name="texto_personalizado_consola" placeholder="Ej. Tu Gamertag o frase corta"><br><br>
+            </div>
+
+            <label for="mensaje_adicional">Mensaje o instrucciones adicionales (opcional):</label><br>
+            <textarea id="mensaje_adicional" name="mensaje_adicional" rows="4" cols="50" placeholder="Escribe aquí cualquier detalle o solicitud especial."></textarea><br><br>
+
+            <button type="submit">Enviar Personalización</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 GameLand – Todos los derechos reservados.</p>
+        <div class="social-links">
+            <a href="#"><img src="imagenes/facebook.png" alt="Facebook" /></a>
+            <a href="#"><img src="imagenes/instagram.jpeg" alt="Instagram" /></a>
+            <a href="#"><img src="imagenes/wazap.jpg" alt="WhatsApp" /></a>
+        </div>
+    </footer>
+    <script src="Scripts/personaliza.js"></script>
+
+
+</body>
+</html>
